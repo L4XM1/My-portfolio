@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    background-color: $hover-nav-color;
+    color: $secondary-color;
+    padding: 0.9rem;
+    margin-top: 1.5rem;
+    border-radius: 3rem;
+    border-color: $secondary-nav;
+
+    &--cta {
+        font-size: 1.1rem;
+        min-width: 40%;
+        background-color: $hover-nav-color;
+        color: $secondary-color;
+        padding: 0.9rem;
+        margin-top: 1.5rem;
+        border-radius: 3rem;
+        border-color: $secondary-nav;
+        font-weight: 700;
+        display: inline-block;
+        text-align: center;
+
+        &:hover {
+            transform: scale(1.02);
+            -webkit-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+            box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+        }
+
+        &:active {
+            -webkit-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+            -moz-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+            box-shadow: inset 10px 10px 11px -7px $background-color;
+        }
+    }
+}

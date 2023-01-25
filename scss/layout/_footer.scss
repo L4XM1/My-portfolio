@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as *;
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding-bottom: 4rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-height: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: $primary-nav;
+  position: absolute;
+  min-width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 0.8rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: #555;
+    align-self: flex-end;
+    padding: 0.8rem;
+  }
+}

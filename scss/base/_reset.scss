@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  padding-top: 4rem;
+  min-height: 100vh;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  background: $secondary-nav; //fallback ako ne ucita sliku
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.title-border {
+  border-bottom: 0.2rem solid $accent-color;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  max-width: fit-content;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section:not(:first-of-type) {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    background-image: url(../assets/images/background-image.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  section:not(:first-of-type) {
+    max-width: 70rem;
+    margin: 2rem auto;
+    background: linear-gradient(
+      306deg,
+      rgba(3, 3, 3, 0.922) 0%,
+      rgba(49, 49, 49, 0.936) 75%,
+      rgba(88, 88, 88, 0.7875525210084033) 90%
+    );
+  }
+
+  .title-border {
+    margin: 2rem auto;
+  }
+}

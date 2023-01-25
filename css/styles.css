@@ -1,0 +1,582 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  padding-top: 4rem;
+  min-height: 100vh;
+  color: white;
+  font-family: "Lexend Deca", sans-serif;
+  background: #202124;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+
+.title-border {
+  border-bottom: 0.2rem solid #03fa6e;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  max-width: fit-content;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section:not(:first-of-type) {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    background-image: url(../assets/images/background-image.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  section:not(:first-of-type) {
+    max-width: 70rem;
+    margin: 2rem auto;
+    background: linear-gradient(306deg, rgba(3, 3, 3, 0.922) 0%, rgba(49, 49, 49, 0.936) 75%, rgba(88, 88, 88, 0.787552521) 90%);
+  }
+
+  .title-border {
+    margin: 2rem auto;
+  }
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  min-width: 100%;
+  max-height: 4rem;
+  background-color: #35383f;
+  border-bottom: 0.1rem solid #222222;
+}
+.navbar-main__logo-wrapper {
+  display: flex;
+}
+.navbar-main__logo-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Times New Roman", sans-serif;
+}
+.navbar-main__logo-title--surname {
+  padding-left: 1rem;
+  color: #03fa6e;
+}
+.navbar-main svg {
+  max-height: 2.5rem;
+  padding-right: 0.5rem;
+}
+.navbar-main-btn-open {
+  display: block;
+}
+.navbar-main-btn-close {
+  display: none;
+}
+.navbar-main__hamburger-icon {
+  position: relative;
+}
+
+.navbar-desktop {
+  display: none;
+}
+
+.navbar-mobile {
+  display: none;
+  position: absolute;
+  top: 3.8rem;
+  right: 0;
+  z-index: 9;
+  border-bottom: 0.1rem solid #222222;
+  background-color: #35383f;
+  transition: 0.3s;
+  border-bottom-left-radius: 0.5rem;
+}
+.navbar-mobile__navbar-list li {
+  list-style-type: none;
+  text-align: center;
+}
+.navbar-mobile__navbar-list li a {
+  display: inline-block;
+  color: #acacac;
+  font-size: 1.2rem;
+  margin: 1.7rem;
+}
+.navbar-mobile__navbar-list li a:active {
+  color: white;
+}
+
+@media only screen and (min-width: 992px) {
+  .active {
+    background-color: #3d4047;
+  }
+
+  .navbar-main {
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .navbar-main__hamburger-icon {
+    display: none;
+  }
+  .navbar-main__logo-wrapper {
+    padding: 0.5rem;
+  }
+
+  .navbar-desktop {
+    display: block;
+    border: none;
+    background-color: #202124;
+  }
+  .navbar-desktop__navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #35383f;
+  }
+  .navbar-desktop__navbar-list li {
+    list-style-type: none;
+    text-align: center;
+  }
+  .navbar-desktop__navbar-list li a {
+    display: inline-block;
+    color: #acacac;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 1.8rem;
+  }
+  .navbar-desktop__navbar-list li a:hover {
+    background-color: #3d4047;
+    transition: 0.5s;
+  }
+}
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding-bottom: 4rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  max-height: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #35383f;
+  position: absolute;
+  min-width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer li {
+  list-style-type: none;
+  padding: 0.8rem;
+}
+.footer p {
+  font-size: 0.8rem;
+  color: #555;
+  align-self: flex-end;
+  padding: 0.8rem;
+}
+
+#about-me {
+  min-height: 100vh;
+}
+#about-me img {
+  float: right;
+  max-width: 15rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+}
+#about-me p {
+  padding-bottom: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 393px) {
+  #about-me img {
+    max-width: 40%;
+  }
+}
+@media (min-width: 688px) {
+  .about-me__text {
+    margin: 10rem auto;
+    max-width: 55%;
+  }
+
+  #about-me p {
+    text-align: left;
+  }
+  #about-me img {
+    max-width: 15rem;
+    margin-left: 1.5rem;
+  }
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #3d4047;
+  color: #acacac;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  border-radius: 3rem;
+  border-color: #202124;
+}
+
+.btn--cta {
+  font-size: 1.1rem;
+  min-width: 40%;
+  background-color: #3d4047;
+  color: #acacac;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  border-radius: 3rem;
+  border-color: #202124;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn--cta:hover {
+  transform: scale(1.02);
+  -webkit-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+}
+
+.btn--cta:active {
+  -webkit-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+  box-shadow: inset 10px 10px 11px -7px #242424;
+}
+
+.hero-image {
+  background-image: url(../assets/images/background-image.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  filter: brightness(130%);
+  border-bottom: 0.2rem solid #35383f;
+}
+.hero-image__overlay {
+  background: linear-gradient(306deg, rgba(3, 3, 3, 0.922) 0%, rgba(49, 49, 49, 0.936) 75%, rgba(88, 88, 88, 0.787552521) 90%);
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.hero-text h1 {
+  margin: 1rem;
+  font-size: 4rem;
+}
+.hero-text h3 {
+  margin: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 313px) {
+  .hero-text h1 {
+    font-size: 15vw;
+  }
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+#projects {
+  min-height: 100vh;
+}
+
+.projects-intro {
+  text-align: left;
+}
+
+.card-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.card-container .card__img {
+  max-width: 100%;
+}
+.card-container .card__heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+.card-container .card__paragraph {
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #acacac;
+}
+
+@media (min-width: 775px) {
+  #projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .projects-intro {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .card-container .card {
+    max-width: 45%;
+  }
+  .card-container .card__paragraph {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .card-container .card__link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../assets/fonts/LexendDeca-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+.btn {
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #3d4047;
+  color: #acacac;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  border-radius: 3rem;
+  border-color: #202124;
+}
+
+.btn--cta {
+  font-size: 1.1rem;
+  min-width: 40%;
+  background-color: #3d4047;
+  color: #acacac;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  border-radius: 3rem;
+  border-color: #202124;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn--cta:hover {
+  transform: scale(1.02);
+  -webkit-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 13px 15px 23px -7px rgba(0, 0, 0, 0.75);
+}
+
+.btn--cta:active {
+  -webkit-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: inset 10px 10px 11px -7px rgba(0, 0, 0, 0.73);
+  box-shadow: inset 10px 10px 11px -7px #242424;
+}
+
+#contact {
+  min-height: 100vh;
+  margin-bottom: -4rem;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%);
+}
+#contact .title-border {
+  margin-bottom: 4rem;
+}
+
+.contact-form__name, .contact-form__email {
+  font-size: 2rem;
+  max-width: 65%;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form__message {
+  min-width: 95%;
+  min-height: 10rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  display: block;
+  min-width: 7rem;
+  text-align: left;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  border-bottom: 0.15rem solid #acacac;
+  color: white;
+  overflow: hidden;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.submit {
+  margin-bottom: 6rem;
+  font-weight: 700;
+  min-width: 30%;
+}
+.submit:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 775px) {
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact-form__message {
+    min-height: 12rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
